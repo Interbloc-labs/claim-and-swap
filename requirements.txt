@@ -1,0 +1,3 @@
+https://github.com/ctrl-Felix/cosmospy-protobuf/releases/download/osmosis-v21.1.4/osmosis_protobuf-0.4.0.tar.gz
+httpx>=0.23.3
+mospy-wallet>=0.4.2
