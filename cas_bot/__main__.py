@@ -167,12 +167,14 @@ ibc_transaction_hash = client.broadcast_transaction(
 
 print(f"Submitted IBC transfer: {ibc_transaction_hash['hash']}")
 sleep_until_tx_confirmed(tx_hash=ibc_transaction_hash["hash"])
+print(f"Waiting for the IBC transfer to complete (Waiting time 30 seconds)")
+time.sleep(30)
 
 # Osmosis Trade
 
 osmosis_swap_transaction = Transaction(
     account=osmosis_account,
-    gas=455000,
+    gas=3078436,
     chain_id="osmosis-1",
     protobuf="osmosis"
 )
