@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 class CONFIG:
-    API = "https://rest.cosmos.directory/cosmoshub"
+    API = os.getenv("API")
     OSMOSIS_API = os.getenv("OSMOSIS_API")
     OSMOSIS_DENOM = os.getenv("OSMOSIS_DENOM")
     GRPC = "sentinel-mainnet-grpc.autostake.com:443"

@@ -1,3 +1,4 @@
 .idea
 .env
 .venv
+cas_bot/__pycache__
