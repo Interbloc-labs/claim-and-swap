@@ -75,7 +75,7 @@ print(f"Claiming the staking rewards: {tx_hash}")
 # Wait for transaction to be included into the block
 attempts = 0
 
-while attempts < 10 and attempts != -1:
+while attempts < 20 and attempts != -1:
     try:
         msgs = get_events(
             txhash=tx_hash
@@ -84,6 +84,10 @@ while attempts < 10 and attempts != -1:
     except HttpException or httpx.ReadTimeout:
         time.sleep(attempts + 4)
         attempts += 1
+
+if attempts != -1:
+    print("Timeout while waiting for the transaction to hit the chain")
+    exit()
 
 account.increase_sequence()
 
