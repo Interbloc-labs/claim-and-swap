@@ -95,7 +95,7 @@ account.increase_sequence()
 rewards = []
 for msg in msgs:
     for event in msg["events"]:
-        if event["type"] == "withdraw_rewards":
+        if event["type"] == "withdraw_rewards" or event["type"] == "withdraw_commission":
             for attribute in event["attributes"]:
                 if attribute["key"] == "amount":
                     values = attribute["value"]
