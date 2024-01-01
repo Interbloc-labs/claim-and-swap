@@ -51,7 +51,7 @@ for validator_address in validator_addresses:
 
 if CONFIG.VALIDATOR_ADDRESS:
     transaction.add_raw_msg(
-        type_url="/cosmos.distribution.v1beta1.MsgWithdrawDelegatorReward",
+        type_url="/cosmos.distribution.v1beta1.MsgWithdrawValidatorCommission",
         unpacked_msg=MsgWithdrawValidatorCommission(
             validator_address=CONFIG.VALIDATOR_ADDRESS
         )
