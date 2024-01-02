@@ -169,7 +169,7 @@ ibc_transaction_hash = client.broadcast_transaction(
     transaction=ibc_transaction
 )
 
-print(f"Submitted IBC transfer: {ibc_transaction_hash['hash']}")
+print(f"Submitted IBC transfer: {ibc_transaction_hash['hash']}" + f" and log {ibc_transaction_hash['log'] if ibc_transaction_hash['log'] else ''} ")
 sleep_until_tx_confirmed(tx_hash=ibc_transaction_hash["hash"])
 print(f"Waiting for the IBC transfer to complete (Waiting time 30 seconds)")
 time.sleep(30)
@@ -227,4 +227,4 @@ swap_tx_response = osmosis_client.broadcast_transaction(
     transaction=osmosis_swap_transaction
 )
 
-print(f"Swap on Osmosis: {swap_tx_response['hash']}")
+print(f"Swap on Osmosis: {swap_tx_response['hash']}" + f" and log {swap_tx_response['log'] if swap_tx_response['log'] else ''} ")
