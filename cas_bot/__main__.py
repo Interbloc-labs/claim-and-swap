@@ -178,7 +178,7 @@ time.sleep(30)
 
 osmosis_swap_transaction = Transaction(
     account=osmosis_account,
-    gas=3078436,
+    gas=CONFIG.OSMOSIS_TX_GAS,
     chain_id="osmosis-1",
     protobuf="osmosis"
 )

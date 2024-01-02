@@ -23,3 +23,4 @@ class CONFIG:
     CHANNEL_TO_OSMOSIS = os.getenv("CHANNEL_TO_OSMOSIS")
 
     OSMOSIS_USDC_DENOM = os.getenv("OSMOSIS_USDC_DENOM")
+    OSMOSIS_TX_GAS = int(os.getenv("OSMOSIS_TX_GAS"))
