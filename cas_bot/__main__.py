@@ -184,8 +184,8 @@ osmosis_swap_transaction = Transaction(
 )
 
 osmosis_swap_transaction.set_fee(
-    amount=9000,
-    denom="uosmo"
+    amount=CONFIG.OSMOSIS_SWAP_FEE,
+    denom=CONFIG.OSMOSIS_SWAP_FEE_DENOM
 )
 
 route_response = httpx.get(

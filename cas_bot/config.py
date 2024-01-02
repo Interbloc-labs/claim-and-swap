@@ -24,3 +24,6 @@ class CONFIG:
 
     OSMOSIS_USDC_DENOM = os.getenv("OSMOSIS_USDC_DENOM")
     OSMOSIS_TX_GAS = int(os.getenv("OSMOSIS_TX_GAS"))
+
+    OSMOSIS_SWAP_FEE = int(os.getenv("OSMOSIS_SWAP_FEE"))
+    OSMOSIS_SWAP_FEE_DENOM = os.getenv("OSMOSIS_SWAP_FEE_DENOM")
